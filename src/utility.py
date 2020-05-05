@@ -138,7 +138,7 @@ class checkpoint():
             for _ in range(self.n_processes)
         ]
 
-        for p in self.process: p.start()
+        for p in self.process: p.run()
 
     def end_background(self):
         for _ in range(self.n_processes): self.queue.put((None, None))

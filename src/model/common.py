@@ -52,7 +52,7 @@ class ResBlock(nn.Module):
         self.res_scale = res_scale
 
     def forward(self, x):
-        res = self.body(x).mul( self.res_scale)
+        res = self.body(x).mul(self.res_scale)
         res += x
 
         return res
